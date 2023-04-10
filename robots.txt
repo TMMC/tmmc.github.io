@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /*.htaccess
+Disallow: /*.gitattributes
+Disallow: /*.gitignore
+Disallow: /.git
+Disallow: /errors

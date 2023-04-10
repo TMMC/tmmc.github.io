@@ -1,0 +1,63 @@
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+#  Apache Server Configs
+#  URL: tmmc.github.io
+#  Last edited: 2023-04-10
+# - - - - - - - - - - - - - - - - - - - - - - - - -
+
+## Make sure Rewrite Engine is on.
+RewriteEngine On
+
+## Block access to directories without a default document & make sure symbolid links work.
+Options -Indexes -MultiViews +FollowSymlinks
+
+## Set directory indexing
+DirectoryIndex index.php index.html index.htm index.xhtml index.xml
+
+## Custom error pages
+ErrorDocument 400 /errors/400.html
+ErrorDocument 401 /errors/401.html
+ErrorDocument 403 /errors/403.html
+ErrorDocument 404 /errors/404.html
+ErrorDocument 500 /errors/500.html
+
+## Force Internet Explorer 8/9/10 to render pages in the highest mode.
+<IfModule mod_headers.c>
+  Header set X-UA-Compatible "IE=edge"
+  <FilesMatch "\.(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+    Header unset X-UA-Compatible
+  </FilesMatch>
+</IfModule>
+
+## SVG support
+AddType image/svg+xml  svg svgz
+AddEncoding gzip       svgz
+
+## Redirect with the appropriate schema automatically (http or https).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # RewriteBase /
+  # Options +FollowSymlinks
+  # Options +SymLinksIfOwnerMatch
+  RewriteCond %{HTTPS} =on
+  RewriteRule ^ - [env=proto:https]
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ - [env=proto:http]
+</IfModule>
+
+## Suppressing `www.` at the beginning of URLs (www.example.com → example.com).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteCond %{SERVER_ADDR} !=127.0.0.1
+  RewriteCond %{SERVER_ADDR} !=::1
+  RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+## Serve resources with far-future expires headers (comment out on localhost).
+<IfModule mod_expires.c>
+  # Enable expirations
+  ExpiresActive On
+  # Default directive
+  ExpiresDefault "access plus 1 month"
+</IfModule>
