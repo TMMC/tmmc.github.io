@@ -2,5 +2,6 @@ User-agent: *
 Disallow: /*.htaccess
 Disallow: /*.gitattributes
 Disallow: /*.gitignore
-Disallow: /.git
-Disallow: /errors
+Disallow: /.git/
+Disallow: /errors/
+Disallow: /some-elements.html

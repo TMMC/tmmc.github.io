@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <!-- Base -->
+  <meta charset="utf-8" />
+  <!-- meta http-equiv="X-UA-Compatible" content="IE=edge" / --><!-- Moved to .htaccess -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TMMC - additional elements</title>
+  <!-- SEO -->
+  <meta name="description" content="Temporary landing page" />
+  <meta name="keywords" content="front-end, web development, web design" />
+  <meta name="robots" content="noindex,nofollow" /><!-- all -->
+  <!-- Icons -->
+  <link rel="shortcut icon" href="-/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="-/img/apple-touch-icon.png" />
+  <!-- Styles -->
+  <link href="-/css/main.min.css" rel="stylesheet" />
+  <style>
+    /* body { background: #fff; } */
+    #content > .content-section:first-child { z-index: 2; }
+  </style>
+  <!-- IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="-/js/html5shiv.min.js"></script>
+    <script src="-/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <a id="skip-link" href="#content" title="Skip to main content">Skip to main content</a>
+  <div class="wrapper sandbox">
+    <!--[if lt IE 9]>
+      <div id="warning-ie-outdated" class="alert alert-dismissible" role="alert">
+        <p>You are using a <strong>really outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <button type="button" class="close" data-dismiss="alert" title="Close this message">
+          <i aria-hidden="true">&times;</i>
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
+    <![endif]-->
+    <!-- aside id="masthead" role="complementary">
+      <div class="container">...</div>
+    </aside -->
+    <main id="content" class="container" tabindex="-1" role="main">
+      <section class="content-section">
+        <h2>Select-like dropdown</h2>
+        <div class="btn-group dropdown-select">
+          <button id="d-label-01" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Follow the white rabbit <span class="caret"></span> </button>
+          <ul class="dropdown-menu" aria-labelledby="d-label-01">
+            <li class="dropdown-header">Dropdown header</li>
+            <li>
+              <a href="https://github.com/TMMC" target="_blank" title="Github profile">
+                <i class="icon icon-fw icon-github" aria-hidden="true"></i> Github
+              </a>
+            </li>
+            <li>
+              <a href="https://jsfiddle.net/user/TMMC/" target="_blank" title="JSFiddle profile">
+                <i class="icon icon-fw icon-jsfiddle" aria-hidden="true"></i> JSFiddle
+              </a>
+            </li>
+            <li>
+              <a href="https://codepen.io/TMMC/" target="_blank" title="CodePen profile">
+                <i class="icon icon-fw icon-codepen" aria-hidden="true"></i> CodePen
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/_TMMC_" target="_blank" title="Twitter profile">
+                <i class="icon icon-fw icon-twitter" aria-hidden="true"></i> Twitter
+              </a>
+            </li>
+            <li class="divider" role="separator"></li>
+            <li>
+              <a href="mailto:tc@tmmc.pl">
+                <i class="icon icon-fw icon-envelope" aria-hidden="true"></i> tc@tmmc.pl
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="btn-group dropdown-select dropdown-select-dark">
+          <button id="d-label-02" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Follow the white rabbit <span class="caret"></span> </button>
+          <div class="dropdown-menu" aria-labelledby="d-label-02">
+            <div class="dropdown-header">Dropdown header (plain text)</div>
+            <ul>
+              <li class="active">
+                <a href="https://github.com/TMMC" target="_blank" title="Github profile">
+                  <i class="icon icon-fw icon-github" aria-hidden="true"></i> Github
+                </a>
+              </li>
+              <li class="disabled">
+                <a href="https://jsfiddle.net/user/TMMC/" target="_blank" title="JSFiddle profile">
+                  <i class="icon icon-fw icon-jsfiddle" aria-hidden="true"></i> JSFiddle
+                </a>
+              </li>
+            </ul>
+            <a href="mailto:tc@tmmc.pl">
+              <i class="icon icon-fw icon-envelope" aria-hidden="true"></i> tc@tmmc.pl
+            </a>
+            <hr class="dropdown-divider" role="separator" />
+            <a class="dropdown-header" href="#">Dropdown header (link)</a>
+            <ul>
+              <li>
+                <a href="https://codepen.io/TMMC/" target="_blank" title="CodePen profile">
+                  <i class="icon icon-fw icon-codepen" aria-hidden="true"></i> CodePen
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/_TMMC_" target="_blank" title="Twitter profile">
+                  <i class="icon icon-fw icon-twitter" aria-hidden="true"></i> Twitter
+                </a>
+              </li>
+            </ul>
+            <hr class="dropdown-divider" role="separator" />
+            <ul>
+              <li>
+                <a href="https://codepen.io/TMMC/" target="_blank" title="CodePen profile">
+                  <i class="icon icon-fw icon-facebook-official" aria-hidden="true"></i> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/_TMMC_" target="_blank" title="Twitter profile">
+                  <i class="icon icon-fw icon-google-plus-square" aria-hidden="true"></i> Google+
+                </a>
+              </li>
+            </ul>
+            <hr class="dropdown-divider" role="separator" />
+            <a href="http://www.example.com/" target="_blank" title="Some link [www.example.com]">
+              <i class="icon icon-fw icon-globe " aria-hidden="true"></i> example.com
+            </a>
+            <a href="http://www.example.com/" target="_blank" title="Some link [www.example.com]">
+              <i class="icon icon-fw icon-link" aria-hidden="true"></i> example.com
+            </a>
+          </div>
+        </div>
+        <div class="btn-group dropdown-select">
+          <button id="d-label-03" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact, hire or follow <i class="icon icon-angle-down"></i> </button>
+          <div class="dropdown-menu" aria-labelledby="d-label-03">
+            <a href="mailto:tc@tmmc.pl">
+              <i class="icon icon-fw icon-envelope" aria-hidden="true"></i> tc@tmmc.pl
+            </a>
+            <hr class="dropdown-divider" role="separator" />
+            <ul>
+              <li>
+                <a href="https://github.com/TMMC" target="_blank" title="Github profile">
+                  <i class="icon icon-fw icon-github" aria-hidden="true"></i> Github
+                </a>
+              </li>
+              <li>
+                <a href="https://jsfiddle.net/user/TMMC/" target="_blank" title="JSFiddle profile">
+                  <i class="icon icon-fw icon-jsfiddle" aria-hidden="true"></i> JSFiddle
+                </a>
+              </li>
+              <li>
+                <a href="https://codepen.io/TMMC/" target="_blank" title="CodePen profile">
+                  <i class="icon icon-fw icon-codepen" aria-hidden="true"></i> CodePen
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/_TMMC_" target="_blank" title="Twitter profile">
+                  <i class="icon icon-fw icon-twitter" aria-hidden="true"></i> Twitter
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn-group dropdown-select dropdown-select-dark">
+          <button type="button" id="d-label-04" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact, hire or follow <i class="icon icon-angle-down"></i> </button>
+          <div class="dropdown-menu" aria-labelledby="d-label-04">
+            <a href="mailto:tc@tmmc.pl">
+              <i class="icon icon-fw icon-envelope" aria-hidden="true"></i> tc@tmmc.pl
+            </a>
+            <hr class="dropdown-divider" role="separator" />
+            <ul>
+              <li>
+                <a href="https://github.com/TMMC" target="_blank" title="Github profile">
+                  <i class="icon icon-fw icon-github" aria-hidden="true"></i> Github
+                </a>
+              </li>
+              <li>
+                <a href="https://jsfiddle.net/user/TMMC/" target="_blank" title="JSFiddle profile">
+                  <i class="icon icon-fw icon-jsfiddle" aria-hidden="true"></i> JSFiddle
+                </a>
+              </li>
+              <li>
+                <a href="https://codepen.io/TMMC/" target="_blank" title="CodePen profile">
+                  <i class="icon icon-fw icon-codepen" aria-hidden="true"></i> CodePen
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/_TMMC_" target="_blank" title="Twitter profile">
+                  <i class="icon icon-fw icon-twitter" aria-hidden="true"></i> Twitter
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="content-section">
+        <h2>Tags list with tooltips</h2>
+        <ul class="tags-list">
+          <li data-toggle="tooltip" data-placement="bottom" title="HTML, CSS, and JS framework">Boostrap</li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Responsive web design">RWD</li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Cascading Style Sheets (level 3)">CSS3</li>
+          <li data-toggle="tooltip" data-placement="bottom" title="HyperText Markup Language (version 5)">HTML5</li>
+          <li data-toggle="tooltip" data-placement="bottom" title="JavaScript library">jQuery</li>
+          <li data-toggle="tooltip" data-placement="bottom" title="PHP: Hypertext Preprocessor">PHP</li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Open-source database management system">MySQL</li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Logotype design">Logotype</li>
+        </ul>
+      </section>
+      <!-- ★★★ Crossfade images animation (semntics die here) ★★★ -->
+      <div class="crossfade-canvas">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div><!--/ .crossfade-canvas -->
+    </main>
+    <footer role="contentinfo" id="mastfoot">
+      <div class="container">
+        <p>&copy; 2015-2016 <a title="TMMC - projektowanie stron internetowych" href="http://tmmc.pl">TMMC</a></p>
+        <ul class="list-icons">
+          <li>
+            <a href="https://github.com/TMMC" target="_blank" title="Github profile">
+              <i class="icon icon-fw icon-github" aria-hidden="true"></i>
+              <span class="sr-only">TMMC@Github</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://jsfiddle.net/user/TMMC/" target="_blank" title="JSFiddle profile">
+              <i class="icon icon-fw icon-jsfiddle" aria-hidden="true"></i>
+              <span class="sr-only">TMMC@JSFiddle</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://codepen.io/TMMC/" target="_blank" title="CodePen profile">
+              <i class="icon icon-fw icon-codepen" aria-hidden="true"></i>
+              <span class="sr-only">TMMC@CodePen</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/_TMMC_" target="_blank" title="Twitter profile">
+              <i class="icon icon-fw icon-twitter" aria-hidden="true"></i>
+              <span class="sr-only">_TMMC_@Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <!-- JavaScript -->
+  <script src="-/js/jquery.min.js"></script>
+  <script src="-/js/plugins.min.js"></script>
+  <script src="-/js/main.min.js"></script>
+  <script>$(function() { $('[data-toggle="tooltip"]').tooltip(); });</script>
+  <!-- Google tag (gtag.js) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPTWB5KDNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VPTWB5KDNW');
+  </script> -->
+</body>
+</html>
